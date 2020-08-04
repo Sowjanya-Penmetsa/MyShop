@@ -56,7 +56,23 @@ namespace MyShop.DataAccess.InMemory
             {
                 throw new Exception("Product not found");
             }
+        }
+        public IQueryable<Product> Collection()
+        {
+            return products.AsQueryable();
+        }
+        public void Delete(string Id)
+        {
+            Product productToDelete = products.Find(p => p.Id == Id);
 
+            if (productToDelete != null)
+            {
+                products.Remove(productToDelete);
+            }
+            else
+            {
+                throw new Exception("Product not found!");
+            }
         }
     }
 }
