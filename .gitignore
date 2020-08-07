@@ -12,10 +12,7 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-*.png
-*.jpeg
-*.jpg
-*.gif
+
 
 # Mono auto generated files
 mono_crash.*
