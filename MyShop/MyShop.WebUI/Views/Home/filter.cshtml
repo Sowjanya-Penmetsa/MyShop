@@ -1,0 +1,19 @@
+﻿@model IEnumerable<MyShop.Core.Models.ProductCategory>
+
+@{
+    ViewBag.Title = "filter";
+}
+
+<h2>filter</h2>
+@foreach (var item in Model)
+{
+    <div class="col-md-4">
+
+        <ul>
+            <li><a href="?searchString">@item.Category</a></li>
+        </ul>
+
+    </div>
+}
+
+   
