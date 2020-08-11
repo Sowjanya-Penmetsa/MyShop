@@ -4,20 +4,6 @@
     ViewBag.Title = "Home Page";
 }
 
-<h1> Product List </h1>
-<div class="col-md-12">
-    <ul class="nav navbar-nav navbar-left" style="list-style-type:none">
-        
-
-        @foreach (var item in Model)
-        {
-            <li><a href="/?SearchString=@item.Category">@item.Category</a></li>
-        }
-
-        <li><a href="Home/Index">All Products</a></li>
-
-    </ul>
-</div>
 
 
 

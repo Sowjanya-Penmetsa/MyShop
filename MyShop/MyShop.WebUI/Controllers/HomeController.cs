@@ -20,21 +20,9 @@ namespace MyShop.WebUI.Controllers
         }
 
 
-        public ActionResult Index(string SearchString)
+        public ActionResult Index()
         {
-            var products = from p in context.Collection()
-                           select p;
-
-
-
-            if (!String.IsNullOrEmpty(SearchString))
-            {
-                products = products.Where(s => s.Category.Contains(SearchString));
-            }
-
-
-
-            return View(products.ToList());
+            
             
         }
 
